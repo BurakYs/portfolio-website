@@ -1,13 +1,21 @@
 @import 'tailwindcss';
 
-* {
-  scroll-behavior: smooth;
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
   .gradient-text {
-    @apply bg-linear-to-r from-gray-200 to-gray-400;
-    color: transparent;
-    background-clip: text;
+    @apply bg-linear-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text;
+  }
+
+  .gradient-bg {
+    @apply bg-linear-to-r from-white/[0.095] to-white/5;
+  }
+
+  .border-fade-hover {
+    @apply border border-transparent hover:border-white/20 duration-150;
   }
 }
