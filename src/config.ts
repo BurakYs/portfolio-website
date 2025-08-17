@@ -21,14 +21,6 @@ export default {
       tags: ['Svelte', 'TailwindCSS', 'Fastify']
     },
     {
-      title: 'Rookie Spitfire',
-      description: 'Fortnite account management Discord bot',
-      thumbnail: 'https://cdn.buraky.dev/banners/rookie-spitfire.png',
-      url: 'https://rookie-spitfire.xyz',
-      repository: 'https://github.com/BurakYs/rookie-spitfire.xyz',
-      tags: ['Svelte', 'Sass', 'TypeScript', 'MongoDB']
-    },
-    {
       title: 'Spitfire Launcher',
       description: 'A launcher app for Fortnite and Epic Games',
       thumbnail: 'https://cdn.buraky.dev/banners/spitfire-launcher-min.png',
