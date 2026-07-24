@@ -34,27 +34,35 @@
   }
 }
 
-@layer components {
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition:
-      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+.reveal {
+  --anim-end: 50%;
 
-  .reveal.visible {
+  opacity: 0;
+  transform: translateY(2rem) scale(0.98);
+  will-change: opacity, transform;
+
+  animation-name: reveal;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range-start: entry 10%;
+  animation-range-end: cover var(--anim-end, 50%);
+}
+
+@keyframes reveal {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
+}
 
-  .no-js .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
+}
 
-  .section-label {
-    @apply font-mono text-xs tracking-[0.2em] text-neutral-600 uppercase;
-  }
+.section-label {
+  @apply font-mono text-xs tracking-[0.2em] text-neutral-600 uppercase;
 }

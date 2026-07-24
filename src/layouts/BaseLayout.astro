@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 import config from '../config';
 ---
 
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,23 +19,5 @@ import config from '../config';
     </main>
 
     <Footer />
-
-    <script>
-      document.documentElement.classList.remove('no-js');
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-      );
-
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    </script>
   </body>
 </html>

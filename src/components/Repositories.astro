@@ -53,39 +53,37 @@ async function fetchRepositories() {
 ---
 
 <Section id="repositories" number="03" title="Open Source">
-  <div class="reveal">
-    {
-      repositories.map((repo, i) => (
-        <a
-          href={repo.url}
-          target="_blank"
-          class={`group hover:bg-surface/50 flex items-center justify-between border-b px-4 py-5 transition-colors ${i === 0 ? 'border-t' : ''}`}
-        >
-          <div class="flex min-w-0 items-center gap-4">
-            <span class="group-hover:text-accent truncate text-sm font-medium text-neutral-200 transition-colors">
-              {repo.name}
-            </span>
-            <span class="flex-1 truncate text-xs text-neutral-600">{repo.description}</span>
-          </div>
+  {
+    repositories.map((repo, i) => (
+      <a
+        href={repo.url}
+        target="_blank"
+        class={`reveal group hover:bg-surface/50 flex items-center justify-between border-b px-4 py-5 transition-colors ${i === 0 ? 'border-t' : ''}`}
+      >
+        <div class="flex min-w-0 items-center gap-4">
+          <span class="group-hover:text-accent truncate text-sm font-medium text-neutral-200 transition-colors">
+            {repo.name}
+          </span>
+          <span class="flex-1 truncate text-xs text-neutral-600">{repo.description}</span>
+        </div>
 
-          <div class="ml-2 flex shrink-0 items-center gap-4">
-            {repo.language && (
-              <span class="hidden items-center gap-1.5 text-xs text-neutral-500 sm:flex">
-                <span
-                  class="size-2 rounded-full"
-                  style={`background-color: ${languageColors[repo.language.toLowerCase()] || '#CBCBCB'}`}
-                />
-                {repo.language}
-              </span>
-            )}
-
-            <span class="inline-flex items-center gap-1 text-sm text-neutral-600">
-              <span class="text-yellow-500">★</span>
-              <span>{repo.stars}</span>
+        <div class="ml-2 flex shrink-0 items-center gap-4">
+          {repo.language && (
+            <span class="hidden items-center gap-1.5 text-xs text-neutral-500 sm:flex">
+              <span
+                class="size-2 rounded-full"
+                style={`background-color: ${languageColors[repo.language.toLowerCase()] || '#CBCBCB'}`}
+              />
+              {repo.language}
             </span>
-          </div>
-        </a>
-      ))
-    }
-  </div>
+          )}
+
+          <span class="inline-flex items-center gap-1 text-sm text-neutral-600">
+            <span class="text-yellow-500">★</span>
+            <span>{repo.stars}</span>
+          </span>
+        </div>
+      </a>
+    ))
+  }
 </Section>

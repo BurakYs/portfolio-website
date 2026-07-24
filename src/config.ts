@@ -1,6 +1,7 @@
+import spitfireLauncherThumbnail from './assets/spitfire-launcher.webp';
+import vidgetThumbnail from './assets/vidget.webp';
 import go from './assets/go.svg';
 import typescript from './assets/typescript.svg';
-import nodejs from './assets/nodejs.svg';
 import mongodb from './assets/mongodb.svg';
 import svelte from './assets/svelte.svg';
 import react from './assets/react.svg';
@@ -23,7 +24,7 @@ export default {
     {
       title: 'Spitfire Launcher',
       description: 'A launcher app for Fortnite and Epic Games',
-      thumbnail: 'https://cdn.buraky.dev/banners/spitfire-launcher.png',
+      thumbnail: spitfireLauncherThumbnail,
       repository: 'https://github.com/bur4ky/spitfire-launcher',
       url: 'https://rookie-spitfire.xyz/launcher',
       tags: ['Svelte', 'Tauri', 'Rust']
@@ -31,15 +32,14 @@ export default {
     {
       title: 'VidGet',
       description: 'Image, video and audio downloader for multiple platforms.',
-      thumbnail: 'https://cdn.buraky.dev/banners/vidget.png',
+      thumbnail: vidgetThumbnail,
       repository: 'https://github.com/bur4ky/VidGet',
-      tags: ['Svelte', 'Tailwind CSS']
+      tags: ['Svelte']
     }
   ],
   technologies: [
     { name: 'Go', icon: go },
     { name: 'TypeScript', icon: typescript },
-    { name: 'Node.js', icon: nodejs },
     { name: 'MongoDB', icon: mongodb },
     { name: 'Svelte', icon: svelte },
     { name: 'React', icon: react },

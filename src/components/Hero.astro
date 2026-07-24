@@ -3,21 +3,21 @@ import config from '../config';
 ---
 
 <section class="flex flex-col justify-end pt-64 pb-20">
-  <p class="section-label reveal">
+  <p class="section-label">
     {config.profession}
   </p>
 
   <h1
-    class="font-display reveal mt-8 text-[clamp(6rem,15vw,12rem)] leading-[0.85] tracking-tight text-neutral-100 delay-100"
+    class="font-display mt-8 text-[clamp(6rem,15vw,12rem)] leading-[0.85] tracking-tight text-neutral-100"
   >
     {config.name}<span class="text-accent">.</span>
   </h1>
 
-  <p class="reveal mt-4 max-w-lg text-lg text-neutral-400 delay-200">
+  <p class="mt-4 max-w-lg text-lg text-neutral-400">
     {config.about}
   </p>
 
-  <div class="reveal pt- mt-4 flex items-center gap-8 delay-300">
+  <div class="mt-4 flex items-center gap-8">
     <a
       href={`mailto:${config.contactEmail}`}
       class="text-accent hover:text-accent/80 border-accent/30 border-b pb-0.5 font-mono text-sm transition-colors"

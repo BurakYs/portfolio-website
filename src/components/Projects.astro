@@ -9,7 +9,7 @@ import config from '../config';
     {
       config.projects.map((project, i) => (
         <div
-          class={`${i % 2 !== 0 ? 'direction-rtl' : ''} reveal grid items-start gap-8 md:grid-cols-5`}
+          class="reveal grid items-start gap-8 md:grid-cols-5"
           style={`transition-delay: ${i * 0.15}s;`}
         >
           <div class={`overflow-hidden md:col-span-3 ${i % 2 !== 0 ? 'md:order-2' : ''}`}>
@@ -24,7 +24,7 @@ import config from '../config';
           </div>
 
           <div
-            class={`flex h-full flex-col justify-between py-2 md:col-span-2 ${i % 2 !== 0 ? 'direction-ltr md:order-1' : ''}`}
+            class={`flex h-full flex-col justify-between py-2 md:col-span-2 ${i % 2 !== 0 ? 'md:order-1' : ''}`}
           >
             <div>
               <h3 class="text-xl font-medium text-neutral-100">{project.title}</h3>
